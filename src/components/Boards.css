@@ -1,0 +1,120 @@
+/* Boards.css */
+
+/* Styling for the checkbox */
+.board-checkbox {
+  display: inline-block;
+  vertical-align: middle; /* Align checkbox vertically with text */
+  margin-right: 10px;
+}
+
+.board-checkbox input {
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkmark {
+  position: relative;
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background-color: #ccc;
+  border: 1px solid #999;
+}
+
+.checkmark:after {
+  content: '';
+  position: absolute;
+  display: none;
+}
+
+.board-checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+/* Container for boards */
+.boards-container {
+  margin: 20px;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+}
+
+/* Input and button for creating a new board */
+.create-board {
+  margin-bottom: 10px;
+}
+
+.create-board input[type="text"] {
+  padding: 8px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.create-board button {
+  padding: 8px 15px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.create-board button:hover {
+  background-color: #45a049;
+}
+
+/* Actions section containing the delete button */
+.boards-actions {
+  margin-bottom: 10px;
+}
+
+.delete-selected-button {
+  padding: 8px 15px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.delete-selected-button:hover {
+  background-color: #d32f2f;
+}
+
+/* Container for the list of boards */
+.boards-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Individual board box */
+.board-box {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px;
+  background-color: #fff;
+  position: relative;
+  width: calc(33.33% - 20px); /* Adjust width for three boards per row */
+  box-sizing: border-box;
+}
+
+.board-link {
+  text-decoration: none;
+  color: #333;
+}
+
+.board-box h3 {
+  margin: 0;
+  font-size: 16px;
+}
